@@ -9,6 +9,7 @@ const Input = () => {
   if (typeof document !== "undefined") {
     $input = document.querySelector('input')
   }
+  console.log($input)
   if ($input) {
     $input.addEventListener('blur', () => {
       alert('a')
