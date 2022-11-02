@@ -5,10 +5,11 @@ import Link from "next/link";
 import { MdArrowBackIosNew } from "react-icons/md";
 
 const Input = () => {
-  if (typeof document !== "undefined") {
-    document.querySelector('input').onblur = function() {
-      alert('blur')
-    }
+  const $input = document.querySelector('input')
+  if ($input) {
+    $input.addEventListener('blur', () => {
+      alert('a')
+    })
   }
 
   const handleSummit = (e: React.FormEvent<HTMLFormElement>) => {
