@@ -5,7 +5,10 @@ import Link from "next/link";
 import { MdArrowBackIosNew } from "react-icons/md";
 
 const Input = () => {
-  const $input = document.querySelector('input')
+  let $input
+  if (typeof document !== "undefined") {
+    $input = document.querySelector('input')
+  }
   if ($input) {
     $input.addEventListener('blur', () => {
       alert('a')
