@@ -46,14 +46,14 @@ export default function Home() {
         <Link
           className={styles.authButton}
           href={{ pathname: "auth", query: signupQuery }}
-          as="signup"
+          as="auth"
         >
           Sign up
         </Link>
         <Link
           className={styles.authButton}
           href={{ pathname: "auth", query: loginQuery }}
-          as="login"
+          as="auth"
         >
           Log in
         </Link>
