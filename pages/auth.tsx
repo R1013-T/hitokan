@@ -14,11 +14,29 @@ import { useEffect, useState } from "react";
 
 const auth = () => {
   const router = useRouter();
-  const [authState, serAuthState] = useState("")
+  const [authState, setAuthState] = useState("")
   
   useEffect(() => {
-    console.log(router.query.auth)
+    
+    switch (router.query.auth) {
+      case "signup" :
+        setAuthState('SignupBeforeInput')
+        break
+      case "login" :
+        setAuthState('LoginInput')
+        break
+      default :
+
+    }
   },[])
+
+  useEffect(() => {
+    console.log(authState)
+  },[authState])
+
+  const handleClick = () => {
+    setAuthState('aaa')
+  }
 
   return (
     <div className={styles.authWrapper}>
@@ -26,6 +44,7 @@ const auth = () => {
       <div className={styles.authFormWrapper}>
         <form action="">
 
+          <button onClick={handleClick}>button</button>
         </form>
         {/* <AuthLoadingWrap /> */}
       </div>
