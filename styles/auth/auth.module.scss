@@ -1,2 +1,74 @@
 @import "./authParts.module.scss";
 
+.authFormWrapper {
+  .backButton {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    display: flex;
+    color: $subLv2Chara;
+    font-size: 15px;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    p {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+  }
+
+  .signupInputForm {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    height: 100%;
+    animation: showUp 0.2s ease-out;
+    h2 {
+      color: $subLv1Chara;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 200;
+      width: 50%;
+      margin: 0 auto;
+    }
+    .inner {
+      width: 85%;
+      margin: 0 auto;
+      
+      label {
+        margin-top: 15px;
+        color: $subLv1Chara;
+        display: block;
+        font-size: 13px;
+      }
+      input {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        margin: 10px 0 30px;
+        background: $mainBack;
+        color: $mainChara;
+      }
+      button {
+        width: 100%;
+        padding: 11px;
+        text-align: center;
+        color: $mainChara;
+        background: $subLv2Chara;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
