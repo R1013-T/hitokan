@@ -5,15 +5,13 @@ import Link from "next/link";
 import { MdArrowBackIosNew } from "react-icons/md";
 
 const Input = () => {
-
   const handleSummit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    scrollTo(0, 0);
   };
 
   const handleBlur = () => {
-    alert('a')
-  }
+    scrollTo(0, 0);
+  };
 
   return (
     <div>
@@ -25,7 +23,12 @@ const Input = () => {
         <h2>CREATE YOUR ACCOUNT</h2>
         <div className={styles.inner}>
           <label>メールアドレス</label>
-          <input id="input" type="text" placeholder="Email Address" onBlur={handleBlur}/>
+          <input
+            id="input"
+            type="text"
+            placeholder="Email Address"
+            onBlur={handleBlur}
+          />
           <button type="submit">Continue</button>
         </div>
       </form>
