@@ -8,7 +8,7 @@ import { MdArrowBackIosNew } from "react-icons/md";
 if (typeof document !== "undefined") {
   const $input = document.getElementById("input");
   $input?.addEventListener('blur', () => {
-    console.log('aaa')
+    scrollTo(0, 0);
   })
 }
 const Input = () => {
