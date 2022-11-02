@@ -55,15 +55,15 @@ const auth = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (authState) {
-      console.log(authState);
-    }
-  }, [authState]);
+  // useEffect(() => {
+  //   if (authState) {
+  //     console.log(authState);
+  //   }
+  // }, [authState]);
 
-  useEffect(() => {
-    console.log(isLoading);
-  }, [isLoading]);
+  // useEffect(() => {
+  //   console.log(isLoading);
+  // }, [isLoading]);
 
   return (
     <div className={styles.authWrapper}>
