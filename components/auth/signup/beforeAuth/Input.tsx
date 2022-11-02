@@ -4,6 +4,13 @@ import Link from "next/link";
 
 import { MdArrowBackIosNew } from "react-icons/md";
 
+
+if (typeof document !== "undefined") {
+  const $input = document.getElementById("input");
+  $input?.addEventListener('blur', () => {
+    console.log('aaa')
+  })
+}
 const Input = () => {
   return (
     <div>
@@ -15,7 +22,7 @@ const Input = () => {
         <h2>CREATE YOUR ACCOUNT</h2>
         <div className={styles.inner}>
           <label>メールアドレス</label>
-          <input type="text" placeholder="Email Address" />
+          <input id="input" type="text" placeholder="Email Address" />
           <button type="submit">Continue</button>
         </div>
       </form>
