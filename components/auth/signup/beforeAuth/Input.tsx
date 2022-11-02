@@ -1,12 +1,15 @@
 import styles from "../../../../styles/auth/auth.module.scss";
-
 import Link from "next/link";
-
 import { MdArrowBackIosNew } from "react-icons/md";
 
-const Input = () => {
+interface Props {
+  changeIsLoading: Function
+}
+
+const Input = (props: Props) => {
   const handleSummit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    props.changeIsLoading(true)
   };
 
   const handleBlur = () => {

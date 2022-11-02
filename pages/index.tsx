@@ -41,7 +41,7 @@ export default function Home() {
         {/* <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /> */}
       </Head>
 
-      <AuthHeader />
+      <AuthHeader isLoading={false}/>
       <div className={styles.topWrapper}>
         <Link
           className={styles.authButton}

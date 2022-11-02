@@ -1,18 +1,17 @@
-$mainBack: #23282F;
+$mainBack: #23282f;
 $subBack: #141920;
-$mainChara: #E6E6E6;
-$subLv1Chara: #C0C0C0;
+$mainChara: #e6e6e6;
+$subLv1Chara: #c0c0c0;
 $subLv2Chara: #898989;
 $mainStroke: #777;
 $subStroke: #555;
-$red: #FF9796;
-$blue: #719DDC;
+$red: #ff9796;
+$blue: #719ddc;
 
 .authWrapper {
   width: 100%;
   height: 100%;
   position: relative;
-
 }
 
 .header {
@@ -47,7 +46,7 @@ $blue: #719DDC;
     height: 40vw;
     max-height: 300px;
     margin: 10vh auto 0;
-    display: block; 
+    display: block;
   }
 }
 
@@ -66,5 +65,19 @@ $blue: #719DDC;
   width: 100%;
   height: 100%;
   border-radius: 15px 15px 0 0;
+  position: absolute;
+  z-index: 200;
+  transform: translateY(100%);
+  animation: loadingUp 0.3s ease-in-out forwards;
 }
 
+@keyframes loadingUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

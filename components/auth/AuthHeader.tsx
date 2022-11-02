@@ -4,14 +4,17 @@ import Image from "next/image";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const AuthHeader = () => {
-  const [isLoading, setIsLoading] = useState(false);
+interface Props {
+  isLoading: boolean;
+}
+
+const AuthHeader = (props: Props) => {
 
   const handleClick = () => {
-    setIsLoading(prevState => !prevState)
-  }
+    // setIsLoading((prevState) => !prevState);
+  };
 
   return (
     <div className={styles.header}>
@@ -21,7 +24,7 @@ const AuthHeader = () => {
         <HiOutlineUserCircle className={styles.headerImg} />
       </div>
       <div className="centerIcon">
-        {isLoading ? (
+        {props.isLoading ? (
           <Image
             src="/LoadingIcon.svg"
             alt="Picture of the author"
@@ -29,15 +32,15 @@ const AuthHeader = () => {
             height={200}
             className={styles.centerIconImage}
             onClick={handleClick}
-            />
-            ) : (
-              <Image
-              src="/Icon.svg"
-              alt="Picture of the author"
-              width={500}
-              height={200}
-              className={styles.centerIconImage}
-              onClick={handleClick}
+          />
+        ) : (
+          <Image
+            src="/Icon.svg"
+            alt="Picture of the author"
+            width={500}
+            height={200}
+            className={styles.centerIconImage}
+            onClick={handleClick}
           />
         )}
       </div>
