@@ -10,11 +10,15 @@ import LoginInput from "../components/auth/login/Input";
 import styles from "../styles/auth/auth.module.scss";
 
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const auth = () => {
   const router = useRouter();
+  const [authState, serAuthState] = useState("")
   
-  console.log(router.query.auth)
+  useEffect(() => {
+    console.log(router.query.auth)
+  },[])
 
   return (
     <div className={styles.authWrapper}>
