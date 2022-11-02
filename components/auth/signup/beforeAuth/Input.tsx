@@ -4,20 +4,19 @@ import Link from "next/link";
 
 import { MdArrowBackIosNew } from "react-icons/md";
 
-
-if (typeof document !== "undefined") {
-  const $input = document.getElementById("input");
-  $input?.addEventListener('blur', () => {
-    scrollTo(0, 0);
-    alert()
-  })
-}
 const Input = () => {
+  if (typeof document !== "undefined") {
+    const $input = document.getElementById("input");
+    $input?.addEventListener("blur", () => {
+      scrollTo(0, 0);
+      alert();
+    });
+  }
 
   const handleSummit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    scrollTo(0,0)
-  }
+    e.preventDefault();
+    scrollTo(0, 0);
+  };
 
   return (
     <div>
