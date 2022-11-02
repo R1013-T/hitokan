@@ -6,11 +6,9 @@ import { MdArrowBackIosNew } from "react-icons/md";
 
 const Input = () => {
   if (typeof document !== "undefined") {
-    const $input = document.getElementById("input");
-    $input?.addEventListener("blur", () => {
-      scrollTo(0, 0);
-      alert();
-    });
+    document.querySelector('input').onblur = function() {
+      alert('blur')
+    }
   }
 
   const handleSummit = (e: React.FormEvent<HTMLFormElement>) => {
