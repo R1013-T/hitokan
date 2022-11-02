@@ -9,6 +9,7 @@ if (typeof document !== "undefined") {
   const $input = document.getElementById("input");
   $input?.addEventListener('blur', () => {
     scrollTo(0, 0);
+    alert()
   })
 }
 const Input = () => {
