@@ -1,0 +1,68 @@
+$mainBack: #23282F;
+$subBack: #141920;
+$mainChara: #E6E6E6;
+$subLv1Chara: #C0C0C0;
+$subLv2Chara: #898989;
+$mainStroke: #777;
+$subStroke: #555;
+$red: #FF9796;
+$blue: #719DDC;
+
+.authWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.header {
+  position: absolute;
+  // background: lightcoral;
+  height: 55vh;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    color: $subLv2Chara;
+
+    .headerImg {
+      font-size: 30px;
+      margin: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 25px;
+    }
+  }
+
+  .centerIconImage {
+    width: 40vw;
+    max-width: 300px;
+    height: 40vw;
+    max-height: 300px;
+    margin: 10vh auto 0;
+    display: block; 
+  }
+}
+
+.authFormWrapper {
+  position: absolute;
+  background: $subBack;
+  height: 45vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 15px 15px 0 0;
+}
+
+.authLoadingWrap {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+}
+

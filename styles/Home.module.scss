@@ -1,0 +1,95 @@
+$mainBack: #23282f;
+$subBack: #141920;
+$mainChara: #e6e6e6;
+$subLv1Chara: #c0c0c0;
+$subLv2Chara: #898989;
+$mainStroke: #777;
+$subStroke: #555;
+$red: #ff9796;
+$blue: #719ddc;
+
+.article {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.topWrapper {
+  position: absolute;
+  height: 45vh;
+  width: 100%;
+  bottom: 0;
+  background: $subBack;
+  border-radius: 15px 15px 0 0;
+
+  .authButton {
+    display: block;
+    margin: 20px auto 0;
+    width: 85%;
+    text-align: center;
+    padding: 9px 0;
+    border: 1px solid $mainBack;
+    border-radius: 3px;
+    color: $mainChara;
+    font-weight: 200;
+    font-size: 15px;
+
+    &:first-of-type {
+      margin-top: 30px;
+      background: $mainBack;
+    }
+  }
+  .or {
+    color: $subLv1Chara;
+    font-weight: 300;
+    font-size: 13px;
+    width: 85%;
+    margin: 20px auto 0;
+    text-align: center;
+    &::before,
+    &::after {
+      border-top: 1px solid;
+      content: "";
+      width: 33vw; /* 線の長さ */
+    }
+    &::before {
+      margin-right: 1em;
+    }
+    &::after {
+      margin-left: 1em;
+    }
+    margin-top: 25px;
+    display: flex;
+    align-items: center; /* 垂直中心 */
+    justify-content: center; /* 水平中心 */
+    color: $subLv1Chara;
+    font-size: 12px;
+  }
+
+  .GoogleButton {
+    display: block;
+    margin: 25px auto 30px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    background: $subLv2Chara;
+    padding: 7px 15px;
+    border-radius: 3px;
+
+    .googleIcon {
+      font-size: 26px;
+      width: 30px;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.5;
+      color: $mainChara;
+      font-weight: 300;
+    }
+
+    div {
+      width: 30px;
+    }
+  }
+}
